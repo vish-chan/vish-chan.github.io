@@ -20,7 +20,7 @@ export default class NavigationBar extends Component {
         return (
                 <Navbar color='dark' dark expand="md">
                     <div  className="container">
-                    <NavbarBrand href="/home">Vishal Chand</NavbarBrand>
+                    <NavbarBrand style={{fontSize:30}} href="/home">Vishal Chand</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -28,7 +28,10 @@ export default class NavigationBar extends Component {
                                 <NavLink href="/home">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/cv">CV</NavLink>
+                                <NavLink href="/cv">Resume</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/projects">Projects</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/blog">Blog</NavLink>
