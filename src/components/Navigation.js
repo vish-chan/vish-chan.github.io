@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink, NavbarBrand} from 'reactstrap';
+import {Navbar, NavbarToggler, Collapse, Nav, NavItem, NavbarBrand} from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 export default class NavigationBar extends Component {
 
@@ -20,21 +21,24 @@ export default class NavigationBar extends Component {
         return (
                 <Navbar color='dark' dark expand="md">
                     <div  className="container">
-                    <NavbarBrand style={{fontSize:30}} href="/home">Vishal Chand</NavbarBrand>
+                    <NavbarBrand style={{fontSize:30}} href="/">Vishal Chand</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/home">Home</NavLink>
+                                <NavLink className="nav-link" to='/home'><i className="fa fa-home" aria-hidden="true"></i> Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/cv">Resume</NavLink>
+                                <NavLink className="nav-link" to="/cv"><i className="fa fa-file-text" aria-hidden="true"/> Resume</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/projects">Projects</NavLink>
+                                <NavLink className="nav-link" to="/projects"><i className="fa fa-code" aria-hidden="true"/> Projects</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/blog">Blog</NavLink>
+                                <NavLink className="nav-link" to="/blog">Blog</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to="/Roshambo-Town">Roshambo Town</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

@@ -7,7 +7,7 @@ export default function HomeComponent(props) {
         <div className="container">
             <div className="row d-flex justify-content-center align-items-center top-buffer">
                 <div className="col-10 col-md-5">
-                    <img style={{width:'100%'}} src="assets/dp.jpg" alt="My Photo"/>
+                    <img style={{width:'100%'}} src="assets/dp.png" alt="My Photo"/>
                 </div>
                 <div className="col-12 col-md-7 text-center text-md-left" style={{fontFamily:'Calibri, sans-serif', fontSize:'18px'}}>
                     <div class="row d-flex justify-content-center align-items-center ">
