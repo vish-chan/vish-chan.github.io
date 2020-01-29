@@ -15,13 +15,13 @@ export default function HomeComponent(props) {
                             <p  style={{fontSize:'50px', color:'#484848'}}> <b>Hello,</b><span style={{fontSize:'30px', color:'#484848'}}> a bit about me: </span></p>
                         </div>
                         <div className="col-3 d-none d-md-block">
-                            <SmallCard color="orange" text="My Resume"/>
+                            <SmallCard className="buttonResume" text="My Resume"/>
                         </div>
                         <div className="col-3 d-none d-md-block">
-                            <SmallCard color="green" text="My Work"/>
+                            <SmallCard className="buttonProjects" text="My Work"/>
                         </div>
                         <div className="col-3 d-none d-md-block">
-                            <SmallCard color="blue" text="My Skills"/>
+                            <SmallCard className="buttonSkills" text="My Skills"/>
                         </div>
                         <div className="col-12 top-buffer">
                             I am a Software Developer, currently working at Qualcomm. 
@@ -38,6 +38,6 @@ export default function HomeComponent(props) {
 
 function SmallCard(props) {
     return(
-        <div className="circle" style={{backgroundColor:props.color}}><Link style={{color:"white"}} to="/cv">{props.text}</Link></div>
+       <Link className={"circle "+props.className} to="/cv">{props.text}</Link>
     )
 }

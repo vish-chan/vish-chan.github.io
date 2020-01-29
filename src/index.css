@@ -17,13 +17,69 @@ body {
     height:120px;
     border-radius:60px;
     font-size:18px;
-    color:#fff;
     text-align: center;
     line-height: 120px;
     -webkit-border-radius:60px;
     -moz-border-radius:60px;
     -ms-border-radius:60px;
     -o-border-radius:60px;
+}
+
+.buttonResume {
+  background-color: #E83556;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  transition: filter 0.3s ease 0s;
+  -webkit-transition: filter 0.3s ease 0s;
+  -moz-transition: filter 0.3s ease 0s;
+  -ms-transition: filter 0.3s ease 0s;
+  -o-transition: filter 0.3s ease 0s;
+}
+
+.buttonResume:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+}
+
+.buttonProjects {
+  background-color: #61D0D4;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  transition: filter 0.3s ease 0s;
+  -webkit-transition: filter 0.3s ease 0s;
+  -moz-transition: filter 0.3s ease 0s;
+  -ms-transition: filter 0.3s ease 0s;
+  -o-transition: filter 0.3s ease 0s;
+}
+
+.buttonProjects:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+}
+
+.buttonSkills {
+  background-color: #D1C926;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  transition: filter 0.3s ease 0s;
+  -webkit-transition: filter 0.3s ease 0s;
+  -moz-transition: filter 0.3s ease 0s;
+  -ms-transition: filter 0.3s ease 0s;
+  -o-transition: filter 0.3s ease 0s;
+}
+
+.buttonSkills:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
 }
 
 code {
