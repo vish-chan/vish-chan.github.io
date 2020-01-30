@@ -14,7 +14,7 @@ export default function HomeComponent(props) {
                 <div className="col-12 col-md-7 text-center text-md-left" style={{fontFamily:'Calibri, sans-serif', fontSize:'18px'}}>
                     <div class="row d-flex justify-content-between align-items-center ">
                         <div className="col-12">
-                            <p  style={{fontSize:'50px', color:'#484848'}}> <b>Hello,</b><span style={{fontSize:'30px', color:'#484848'}}> a bit about me: </span></p>
+                            <div style={{fontSize:'50px', color:'#484848'}}> <b>Hello,</b><span style={{fontSize:'26px', color:'#484848'}}> a bit about me: </span></div>
                         </div>
                         <div className="col-12 d-flex justify-content-around">
                             <div>
@@ -31,7 +31,7 @@ export default function HomeComponent(props) {
                             {INFO}
                         </div>
                         <div className="col-12 top-buffer">
-                            <Alert color="success" style={{fontSize:25}}><i className="fa fa-bullhorn fa-lg"/>  Play my latest game <a href="http://vishalchand.com/Roshambo-Town/">Roshambo Town</a>.</Alert>
+                            <Alert color="success" style={{fontSize:25}}><i className="fa  fa-gamepad fa-lg"/>  Play my latest game <a href="http://vishalchand.com/Roshambo-Town/">Roshambo Town</a>.</Alert>
                         </div>
                     </div>
                 </div>

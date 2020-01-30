@@ -24,16 +24,16 @@ body {
 
 .circle
     {
-    width:120px;
-    height:120px;
-    border-radius:60px;
+    width:100px;
+    height:100px;
+    border-radius:50%;
     font-size:18px;
     text-align: center;
-    line-height: 120px;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    -ms-border-radius:60px;
-    -o-border-radius:60px;
+    line-height: 100px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
 }
 
 .buttonResume {
