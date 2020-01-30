@@ -25,10 +25,10 @@ function ExperienceUI(props) {
 
     return(
         <div id="experience" className="row" style={{borderBottom: "1px solid grey", marginBottom:'20px'}}>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-lg-4">
                 <div className="circleCV experience">Work Experience</div>
             </div>
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-lg-8">
                 {experienceUI}
             </div>
         </div>
@@ -57,10 +57,10 @@ function EducationUI(props) {
 
     return(
         <div id="experience" className="row" style={{borderBottom: "1px solid grey", marginBottom:'20px'}}>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-lg-4">
                 <div className="circleCV experience">Education</div>
             </div>
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-lg-8">
                 {educationUI}
             </div>
         </div>
@@ -114,18 +114,18 @@ function CVComponent(props) {
     return(
         <ul className="container">
             <div className="row">
-                <h1 className="col-12 projectHeading">Resume</h1>
+                <h1 className="col-12 projectHeading">Resume <a href="assets/cv.pdf" title="Download PDF" type="application/pdf"><i className="fa fa-file-text"></i></a></h1>
             </div>
             <div className="row">
-                <div className="col-12 col-md-8">
+                <div className="col-12 col-lg-8">
                     <ExperienceUI />
                 </div>
-                <div className="col-12 col-md-4 order-2">
+                <div className="col-12 col-lg-4 order-2">
                     <CourseWorkUI />
                     <Languages />
                     <AoI />
                 </div>
-                <div className="col-12 col-md-8 order-md-2">
+                <div className="col-12 col-lg-8 order-lg-2">
                     <EducationUI />
                 </div>
             </div>
