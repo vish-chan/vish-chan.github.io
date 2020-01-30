@@ -37,9 +37,6 @@ export default class NavigationBar extends Component {
                                 <NavItem>
                                     <NavLink className="nav-link" to="/blog"><i className="fa fa-wordpress" aria-hidden="true"/> Blog</NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/Roshambo-Town">Roshambo Town</NavLink>
-                                </NavItem>
                             </Nav>
                         </Collapse>
                         </div>

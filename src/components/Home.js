@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { INFO } from '../data/constants';
+import {Alert} from 'reactstrap';
 
 export default function HomeComponent(props) {
 
     return(
-        <div className="container">
+        <div className="container" style={{marginTop:50, marginBottom:100}}>
             <div className="row d-flex justify-content-center align-items-center top-buffer">
                 <div className="col-10 col-md-5">
                     <img style={{width:'100%'}} src="assets/dp.png" alt="Profile"/>
@@ -26,10 +28,10 @@ export default function HomeComponent(props) {
                             </div>
                         </div>
                         <div className="col-12 top-buffer">
-                            I am a Software Developer, currently working at Qualcomm. 
-                            I completed my dual degree (B. Tech + M. Tech) in Computer Science and Engineering from IIT Roorkee in 2015, 
-                            where I developed and explored my interests in Algorithms, Data Structure, Game Developement, Distributed Computing, and System Software. 
-                            I love travelling, photography, listening to music, problem solving, working out and watching animals sing.
+                            {INFO}
+                        </div>
+                        <div className="col-12 top-buffer">
+                            <Alert color="success" style={{fontSize:25}}><i className="fa fa-bullhorn fa-lg"/>  Play my latest game <a href="http://vishalchand.com/Roshambo-Town/">Roshambo Town</a>.</Alert>
                         </div>
                     </div>
                 </div>
