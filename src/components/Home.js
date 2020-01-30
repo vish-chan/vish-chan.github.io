@@ -7,20 +7,20 @@ export default function HomeComponent(props) {
         <div className="container">
             <div className="row d-flex justify-content-center align-items-center top-buffer">
                 <div className="col-10 col-md-5">
-                    <img style={{width:'100%'}} src="assets/dp.png" alt="My Photo"/>
+                    <img style={{width:'100%'}} src="assets/dp.png" alt="Profile"/>
                 </div>
                 <div className="col-12 col-md-7 text-center text-md-left" style={{fontFamily:'Calibri, sans-serif', fontSize:'18px'}}>
-                    <div class="row d-flex justify-content-center align-items-center ">
+                    <div class="row d-flex justify-content-between align-items-center ">
                         <div className="col-12">
                             <p  style={{fontSize:'50px', color:'#484848'}}> <b>Hello,</b><span style={{fontSize:'30px', color:'#484848'}}> a bit about me: </span></p>
                         </div>
-                        <div className="col-3 d-none d-md-block">
+                        <div className="col-4 ">
                             <SmallCard className="buttonResume" text="My Resume"/>
                         </div>
-                        <div className="col-3 d-none d-md-block">
+                        <div className="col-4 ">
                             <SmallCard className="buttonProjects" text="My Work"/>
                         </div>
-                        <div className="col-3 d-none d-md-block">
+                        <div className="col-4 ">
                             <SmallCard className="buttonSkills" text="My Skills"/>
                         </div>
                         <div className="col-12 top-buffer">

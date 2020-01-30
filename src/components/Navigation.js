@@ -21,29 +21,29 @@ export default class NavigationBar extends Component {
         return (
                 <Navbar color='dark' dark expand="md">
                     <div  className="container">
-                    <NavbarBrand style={{fontSize:30}} href="/">Vishal Chand</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink className="nav-link" to='/home'><i className="fa fa-home" aria-hidden="true"></i> Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/cv"><i className="fa fa-file-text" aria-hidden="true"/> Resume</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/projects"><i className="fa fa-code" aria-hidden="true"/> Projects</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/blog">Blog</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/Roshambo-Town">Roshambo Town</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                    </div>
-                </Navbar>
+                        <div className="row"><NavbarBrand style={{fontSize:30}} href="/">Vishal Chand</NavbarBrand></div>
+                        <NavbarToggler onClick={this.toggle} />
+                        <Collapse isOpen={this.state.isOpen} navbar>
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/home'><i className="fa fa-home" aria-hidden="true"></i> Home</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/cv"><i className="fa fa-file-text" aria-hidden="true"/> Resume</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/projects"><i className="fa fa-code" aria-hidden="true"/> Projects</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/blog"><i className="fa fa-wordpress" aria-hidden="true"/> Blog</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/Roshambo-Town">Roshambo Town</NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                        </div>
+                    </Navbar>
           );    
     }
 }
