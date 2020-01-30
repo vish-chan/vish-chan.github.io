@@ -15,7 +15,7 @@ export const PROJECTS = [
         id: 6,
         title: "Roshambo Town",
         subtitle: "Independent",
-        img: ASSETS_BASE + "/roshambo.png",
+        img: ASSETS_BASE + "/roshambo.PNG",
         desc: "A role playing game based on rock paper & scissosrs. Contains 8 different maps, and gameboy pokemon style roshambo matches. Developed using react-redux. Available to play at 'http://vishalchand.com/Roshambo-Town'",
     },
 
