@@ -14,14 +14,16 @@ export default function HomeComponent(props) {
                         <div className="col-12">
                             <p  style={{fontSize:'50px', color:'#484848'}}> <b>Hello,</b><span style={{fontSize:'30px', color:'#484848'}}> a bit about me: </span></p>
                         </div>
-                        <div className="col-4 ">
-                            <SmallCard className="buttonResume" text="My Resume"/>
-                        </div>
-                        <div className="col-4 ">
-                            <SmallCard className="buttonProjects" text="My Work"/>
-                        </div>
-                        <div className="col-4 ">
-                            <SmallCard className="buttonSkills" text="My Skills"/>
+                        <div className="col-12 d-flex justify-content-around">
+                            <div>
+                                <SmallCard className="buttonResume" text="My Resume" to="/cv"/>
+                            </div>
+                            <div>
+                                <SmallCard className="buttonProjects" text="My Work" to="/projects"/>
+                            </div>
+                            <div>
+                                <SmallCard className="buttonSkills" text="My Skills"to="/projects"/>
+                            </div>
                         </div>
                         <div className="col-12 top-buffer">
                             I am a Software Developer, currently working at Qualcomm. 
@@ -38,6 +40,6 @@ export default function HomeComponent(props) {
 
 function SmallCard(props) {
     return(
-       <Link className={"circle "+props.className} to="/cv">{props.text}</Link>
+       <Link className={"circle "+props.className} to={props.to}>{props.text}</Link>
     )
 }
