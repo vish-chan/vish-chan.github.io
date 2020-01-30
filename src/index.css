@@ -115,6 +115,28 @@ body {
   margin: 10px;
 }
 
+.circleCoursework
+    {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    font-size:20px;
+    text-align: center;
+    line-height: 120px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+.coursework {
+  background-color: #61D0D4;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  margin: 10px;
+}
+
 .experienceRow {
   margin: 10px;
   font-size: 16px;

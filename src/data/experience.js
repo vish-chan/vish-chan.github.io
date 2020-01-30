@@ -72,3 +72,30 @@ export const EDUCATION = [
         percentage: "96 percent."
     }
 ]
+
+export const COURSES = {
+    graduate: "Adv. Algo, Adv. OS, Adv. Architechture, Adv. DBMS",
+    undergraduate: "Algorithms, DS, OS, Compilers, Discrete Maths, Coumputer Networks",
+    independent: "ML by Andrew Ng, Deep Learning Specialization by Andrew Ng, Applied ML in Python, Adv. Algorithms (Princeton)",
+}
+
+export const LANGUAGES = [
+    "Java",
+    "Python",
+    "C++",
+    "Javascript",
+    "C",
+    "Shell",
+    "HTML and CSS",
+    "C#,"
+]
+
+export const AOI = [
+    "Application Development",
+    "System Design",
+    "Machine Learning and AI",
+    "Game Development",
+    "Performance Modelling",
+    "BigData and Cloud Computing",
+    "Shift Left Testing",
+];
