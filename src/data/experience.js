@@ -4,12 +4,10 @@ export const EXPERIENCE = [
         company: "Experitest",
         designation: "Engineer | Seetest",
         duration: "Oct 2018 - July 2019",
-        desc: "Perform technical qualification of prospects by developing a thorough\
-        understanding of business and recommending appropriate Experitest Solutions. \
-        Development and execution of POCs, and competitive analysis for the new prospects. \
-        Worked with some of the Experitest’s biggest customers in AMER and EMEA \
-        regions. Responsible for integrating Seetest into their product development\
-        environment, and migrating them from manual testing to CI/CD.",
+        desc: "Worked with the Seetest Android team to develop new features and maintain \
+        existing features for cloud based Android devices in Seetest platform. \
+        Development and execution of POCs, and competitive analysis for the new \
+        prospects",
     },
 
     {
