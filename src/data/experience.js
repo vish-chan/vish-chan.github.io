@@ -1,20 +1,37 @@
 export const EXPERIENCE = [
     {
-        id:4,
+        id:6,
+        company: "AMD Inc.",
+        designation: "Senior Software Designer",
+        duration: "2020 - current",
+        desc: "Working with the Java team to optimize Java performance on AMD's EPYC server processors.",
+    },
+    {
+        id:5,
         company: "Experitest",
         designation: "Engineer | Seetest",
-        duration: "Oct 2018 - July 2019",
+        duration: "2018 - 2020",
         desc: "Worked with the Seetest Android team to develop new features and maintain \
         existing features for cloud based Android devices in Seetest platform. \
         Development and execution of POCs, and competitive analysis for the new \
-        prospects",
+        prospects.",
+    },
+    {
+        id:4,
+        company: "Soccer.ai (not registered)",
+        designation: "Co-Founder",
+        duration: "2017 - 2018",
+        desc: "Worked on developing a CNN based image annotation tool to detect players,\
+        ball and different areas of the football pitch in order to get quantitative data for the football players.\
+        Extended the classifier for videos. We couldn’t get enough real-world video data in order to create a robust\
+        classifier and had to stop the startup due to a lack of financial fundings.",
     },
 
     {
         id:3,
         company: "Qualcomm",
         designation: "Engineer | Linux Performance",
-        duration: "June 2015 - August 2018",
+        duration: "2015 - 2017",
         desc: "Responsible for investigation of SW architecture involving analysis of important performance use-cases to find novel performance optimisation solutions.\
          UX, boot time and system performance analysis of Qualcomm's own and competitors' chipsets.\
           Responsible for SW performance execution activities on Qualcomm's wearable SOC product lines.",
@@ -24,7 +41,8 @@ export const EXPERIENCE = [
         company: "Qualcomm",
         designation: "Software Engineering Intern",
         duration: "May 2014 - July 2014",
-        desc: "Developed static and dynamic memory analysis tools in Android to generate specific workloads, collect critical memory info., and create real-time graphs, memory maps, and visual reports for memory performance analysis.",
+        desc: "Developed static and dynamic memory analysis tools in Android to generate specific workloads,\
+        collect critical memory info., and create real-time graphs, memory maps, and visual reports for memory performance analysis.",
     },
 
     {
@@ -32,7 +50,8 @@ export const EXPERIENCE = [
         company: "Qualcomm",
         designation: "Software Engineering Intern",
         duration: "May 2013 - July 2013",
-        desc: "Designed and developed a PCM data logging system for linux audio driver using Relayfs to dump data from audio driver to user-space. Integrated this system in an Android app.",
+        desc: "Designed and developed a PCM data logging system for linux audio driver using \
+        Relayfs to dump data from audio driver to user-space. Integrated this system in an Android app.",
     },
 
     {

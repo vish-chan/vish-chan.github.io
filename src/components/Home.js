@@ -27,8 +27,10 @@ export default function HomeComponent(props) {
                                 <SmallCard className="buttonSkills" text="My Skills"to="/projects"/>
                             </div>
                         </div>
-                        <div className="col-12 top-buffer">
-                            {INFO}
+                        <div className="col-12 top-buffer"> I am a Software Developer, currently working at <a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices">AMD Inc.</a> as a Senior Software Designer in the Java Team under AMD's EPYC server business.
+                        I completed my dual degree (B. Tech + M. Tech) in Computer Science and Engineering from IIT Roorkee in 2015,
+                        where I developed and explored my interests in Algorithms, Data Structure, Game Developement, Distributed Computing, and System Software.
+                        I love travelling, photography, listening to music, problem solving, working out and watching animals sing.
                         </div>
                         <div className="col-12 top-buffer">
                             <Alert color="success" style={{fontSize:25}}><i className="fa  fa-gamepad fa-lg"/>  Play my latest game <a href="http://vishalchand.com/Roshambo-Town/">Roshambo Town</a>.</Alert>
