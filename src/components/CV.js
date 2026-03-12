@@ -1,136 +1,69 @@
 import React from 'react';
 import { EXPERIENCE, EDUCATION, COURSES, LANGUAGES, AOI } from '../data/experience';
 
-
-
-function Experience(props) {
+function TimelineItem({item, isExperience}) {
     return(
-        <div className="row experienceRow">
-            <div className="col-12">
-                <h4>{props.self.company}</h4>
-            </div>
-            <div className="col-12">
-                <h6>{props.self.designation} | {props.self.duration}</h6>
-            </div>
-            <div className="col-12">
-                <p>{props.self.desc}</p>
-            </div>
+        <div className="timeline-item">
+            <h4>{isExperience ? item.company : item.institution}</h4>
+            <h6>
+                {isExperience ? `${item.designation} · ${item.duration}` : `${item.degree} · ${item.duration}`}
+            </h6>
+            <p>{isExperience ? item.desc : <><b>CGPA/Percentage:</b> {item.percentage}</>}</p>
         </div>
     )
 }
 
-function ExperienceUI(props) {
-
-    const experienceUI = EXPERIENCE.map(exp => <Experience self={exp} key={exp.id}/>); 
-
+export default function CVComponent() {
     return(
-        <div id="experience" className="row" style={{borderBottom: "1px solid grey", marginBottom:'20px'}}>
-            <div className="col-12 col-lg-4">
-                <div className="circleCV experience">Work Experience</div>
-            </div>
-            <div className="col-12 col-lg-8">
-                {experienceUI}
-            </div>
-        </div>
-    )
-    
-}
-
-function Education(props) {
-    return(
-        <div className="row experienceRow">
-            <div className="col-12">
-                <h5>{props.self.institution}</h5>
-            </div>
-            <div className="col-12">
-                <h6>{props.self.degree} | {props.self.duration}</h6>
-            </div>
-            <div className="col-12">
-                <p><b>Percentage/CGPA:</b> {props.self.percentage}</p>
-            </div>
-        </div>
-    )
-}
-
-function EducationUI(props) {
-    const educationUI = EDUCATION.map(edu => <Education self={edu} key={edu.id}/>); 
-
-    return(
-        <div id="experience" className="row" style={{borderBottom: "1px solid grey", marginBottom:'20px'}}>
-            <div className="col-12 col-lg-4">
-                <div className="circleCV experience">Education</div>
-            </div>
-            <div className="col-12 col-lg-8">
-                {educationUI}
-            </div>
-        </div>
-    )
-}
-
-function CourseWorkUI(props) {
-    return(
-        <div className="row experienceRow" style={{borderBottom:"1px solid grey"}}>
-            <div className="col-12 d-flex justify-content-center">
-                <div className="circleCoursework coursework">Coursework</div>
-            </div>
-            <h6 className="col-5">Graduate</h6>
-            <p className="col-7">{COURSES.graduate}</p>
-            <h6 className="col-5">UG</h6>
-            <p className="col-7">{COURSES.undergraduate}</p>
-            <h6 className="col-5">Independent</h6>
-            <p className="col-7">{COURSES.independent}</p>
-        </div>
-    )
-}
-
-function Languages(props) {
-    return(
-        <div className="row experienceRow" style={{borderBottom:"1px solid grey"}}>
-            <div className="col-12 d-flex justify-content-center">
-                <div className="circleCoursework coursework">Languages</div>
-            </div>
-            <ul style={{listStyleType: "square"}}>
-                {LANGUAGES.map(l => <li className="col-12">{l}</li>)}
-            </ul>
-        </div>
-    )
-}
-
-function AoI(props) {
-    return(
-        <div className="row experienceRow" style={{borderBottom:"1px solid grey"}}>
-            <div className="col-12 d-flex justify-content-center">
-                <div className="circleCoursework coursework">Interests</div>
-            </div>
-            <ul style={{listStyleType: "square"}}>
-                {AOI.map(l => <li className="col-12">{l}</li>)}
-            </ul>
-        </div>
-    )
-}
-
-function CVComponent(props) {
-
-    return(
-        <ul className="container">
-            <div className="row">
-                <h1 className="col-12 projectHeading">Resume <a href="assets/cv.pdf" title="Download PDF" type="application/pdf"><i className="fa fa-file-text"></i></a></h1>
+        <div className="container">
+            <div className="section-header">
+                <h1>
+                    <span className="prompt">❯ </span>cat resume.md
+                    <a className="cv-download" href="assets/cv.pdf" title="Download PDF" style={{marginLeft: 16}}>
+                        <i className="fa fa-download"/> .pdf
+                    </a>
+                </h1>
             </div>
             <div className="row">
                 <div className="col-12 col-lg-8">
-                    <ExperienceUI />
+                    <h5 style={{color:'#58a6ff', marginBottom: 20}}>
+                        <span className="comment">// </span>Work Experience
+                    </h5>
+                    {EXPERIENCE.map(exp =>
+                        <TimelineItem item={exp} key={exp.id} isExperience/>
+                    )}
+
+                    <h5 style={{color:'#58a6ff', margin: '32px 0 20px'}}>
+                        <span className="comment">// </span>Education
+                    </h5>
+                    {EDUCATION.map(edu =>
+                        <TimelineItem item={edu} key={edu.id}/>
+                    )}
                 </div>
-                <div className="col-12 col-lg-4 order-2">
-                    <CourseWorkUI />
-                    <Languages />
-                    <AoI />
-                </div>
-                <div className="col-12 col-lg-8 order-lg-2">
-                    <EducationUI />
+                <div className="col-12 col-lg-4">
+                    <div className="cv-sidebar-section">
+                        <h5>Languages</h5>
+                        <ul>
+                            {LANGUAGES.map(l => <li key={l}>{l}</li>)}
+                        </ul>
+                    </div>
+                    <div className="cv-sidebar-section">
+                        <h5>Interests</h5>
+                        <ul>
+                            {AOI.map(a => <li key={a}>{a}</li>)}
+                        </ul>
+                    </div>
+                    <div className="cv-sidebar-section">
+                        <h5>Coursework</h5>
+                        <p className="cv-sidebar-label">Graduate</p>
+                        <p className="cv-sidebar-value">{COURSES.graduate}</p>
+                        <p className="cv-sidebar-label">Undergraduate</p>
+                        <p className="cv-sidebar-value">{COURSES.undergraduate}</p>
+                        <p className="cv-sidebar-label">Independent</p>
+                        <p className="cv-sidebar-value">{COURSES.independent}</p>
+                    </div>
                 </div>
             </div>
-        </ul>
+        </div>
     );
 }
-
-export default CVComponent;

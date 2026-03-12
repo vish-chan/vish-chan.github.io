@@ -5,12 +5,10 @@ import CVComponent from './CV';
 import {Switch, Route, Redirect, withRouter} from 'react-router-dom'; 
 import Footer from './Footer';
 import ProjectsComponent from './Projects';
+import BlogComponent from './Blog';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
-
-
 class Main extends Component {
-
     render() {
         return(
             <div>
@@ -21,15 +19,14 @@ class Main extends Component {
                             <Route exact path="/home" component={HomeComponent} />
                             <Route exact path="/cv" component={CVComponent} />
                             <Route exact path="/projects" component={ProjectsComponent} />
+                            <Route exact path="/blog" component={BlogComponent} />
                             <Redirect to="/home" />
                         </Switch>
                     </CSSTransition>
                 </TransitionGroup>
-                
                 <Footer />
             </div>
         )
-        
     }
 }
 

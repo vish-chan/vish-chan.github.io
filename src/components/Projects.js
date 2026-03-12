@@ -1,46 +1,48 @@
 import React from 'react';
 import { PROJECTS } from '../data/projects';
 
-function ProjectComponent(props) {
-
-    const gitlink = "github" in props.self? <a className="btn btn-social-icon btn-github icon" href={props.self.github}><i className="fa fa-github"></i></a>: <div></div>;
-
+function ProjectCard({project}) {
     return(
-        <div className="row projectRow">
-            <div className="d-none d-md-block col-md-4 projectImgContainer">
-                <div className="projectImg" style={{backgroundImage: `url("${props.self.img}")`}} />
-            </div>
-            <div className="col-12 col-md-8">
-                <div className="row">
-                    <div className="col-12">
-                        <h4>{props.self.title}</h4>
+        <div className="col-12 col-md-6">
+            <div className="project-card">
+                <div className="project-card-img" style={{backgroundImage: `url("${project.img}")`}} />
+                <h3>{project.title}</h3>
+                <div className="subtitle">{project.subtitle}</div>
+                {project.tech &&
+                    <div className="tech-tags">
+                        {project.tech.map(t => <span key={t} className="tech-tag">{t}</span>)}
                     </div>
-                    <div className="col-12">
-                        <h6>{props.self.subtitle}</h6>
-                    </div>
-                    <div className="col-12">
-                        <p>{props.self.desc}</p>
-                    </div>
-                    <div className="col-12">
-                        {gitlink}
-                    </div>
+                }
+                <p style={{marginTop: 12}}>{project.desc}</p>
+                <div className="project-card-links">
+                    {project.github &&
+                        <a className="project-card-link" href={project.github} target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-github"/> Code
+                        </a>
+                    }
+                    {project.link &&
+                        <a className="project-card-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-external-link"/> Live Demo
+                        </a>
+                    }
                 </div>
             </div>
         </div>
     )
 }
 
-function ProjectsComponent(props) {
-    const projectsUI = PROJECTS.map(project => <ProjectComponent self={project} key={project.id}/>); 
-
+export default function ProjectsComponent() {
     return(
-        <ul className="container">
-            <div className="row">
-                <h1 className="col-12 projectHeading">Selected Projects</h1>
+        <div className="container">
+            <div className="section-header">
+                <h1>
+                    <span className="prompt">❯ </span>ls ./projects
+                    <span className="comment">// selected work</span>
+                </h1>
             </div>
-            {projectsUI}
-        </ul>
+            <div className="row">
+                {PROJECTS.map(p => <ProjectCard project={p} key={p.id}/>)}
+            </div>
+        </div>
     );
 }
-
-export default ProjectsComponent;

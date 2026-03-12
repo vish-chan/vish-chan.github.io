@@ -1,49 +1,68 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { INFO } from '../data/constants';
-import {Alert} from 'reactstrap';
 
-export default function HomeComponent(props) {
+const ASCII_BANNER = `
+ __     ___     _           _    ____ _                     _ 
+ \\ \\   / (_)___| |__   __ _| |  / ___| |__   __ _ _ __   __| |
+  \\ \\ / /| / __| '_ \\ / _\` | | | |   | '_ \\ / _\` | '_ \\ / _\` |
+   \\ V / | \\__ \\ | | | (_| | | | |___| | | | (_| | | | | (_| |
+    \\_/  |_|___/_| |_|\\__,_|_|  \\____|_| |_|\\__,_|_| |_|\\__,_|
 
+  Senior Software Developer @ AMD
+  Java Performance · EPYC Server Processors
+  IIT Roorkee CS — B.Tech + M.Tech, 2015
+
+  "I build high-performance software."
+`;
+
+export default function HomeComponent() {
     return(
-        <div className="container" style={{marginTop:50, marginBottom:100}}>
-            <div className="row d-flex justify-content-center align-items-center top-buffer">
-                <div className="col-10 col-md-5">
-                    <img style={{width:'100%'}} src="assets/dp.png" alt="Profile"/>
-                </div>
-                <div className="col-12 col-md-7 text-center text-md-left" style={{fontFamily:'Calibri, sans-serif', fontSize:'18px'}}>
-                    <div class="row d-flex justify-content-between align-items-center ">
-                        <div className="col-12">
-                            <div style={{fontSize:'50px', color:'#484848'}}> <b>Hello,</b><span style={{fontSize:'26px', color:'#484848'}}> a bit about me: </span></div>
-                        </div>
-                        <div className="col-12 d-flex justify-content-around">
-                            <div>
-                                <SmallCard className="buttonResume" text="My Resume" to="/cv"/>
-                            </div>
-                            <div>
-                                <SmallCard className="buttonProjects" text="My Work" to="/projects"/>
-                            </div>
-                            <div>
-                                <SmallCard className="buttonSkills" text="My Skills"to="/projects"/>
-                            </div>
-                        </div>
-                        <div className="col-12 top-buffer"> I am a Software Developer, currently working at <a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices">AMD Inc.</a> as a Senior Software Designer in the Java Team under AMD's EPYC server business.
-                        I completed my dual degree (B. Tech + M. Tech) in Computer Science and Engineering from IIT Roorkee in 2015,
-                        where I developed and explored my interests in Algorithms, Data Structure, Game Developement, Distributed Computing, and System Software.
-                        I love travelling, photography, listening to music, problem solving, working out and watching animals sing.
-                        </div>
-                        <div className="col-12 top-buffer">
-                            <Alert color="success" style={{fontSize:25}}><i className="fa  fa-gamepad fa-lg"/>  Play my latest game <a href="http://vishalchand.com/Roshambo-Town/">Roshambo Town</a>.</Alert>
+        <div className="hero-section">
+            <div className="container">
+                <div className="terminal">
+                    <div className="terminal-header">
+                        <span className="terminal-dot red"/>
+                        <span className="terminal-dot yellow"/>
+                        <span className="terminal-dot green"/>
+                        <span className="terminal-title">vishal@amd ~ </span>
+                    </div>
+                    <div className="terminal-body">
+                        <p>
+                            <span className="prompt">&#10095; </span>
+                            <span className="function">vishal</span>
+                            <span className="command">.init()</span>
+                            <span className="cursor"/>
+                        </p>
+
+                        <pre className="ascii-art">{ASCII_BANNER}</pre>
+
+                        <p>
+                            <span className="keyword">const </span>
+                            <span className="function">skills</span>
+                            <span className="command"> = [</span>
+                            {["Java", "Python", "C++", "C", "JavaScript", "Shell", "React", "Linux", "Perf. Engineering", "System Design", "ML"].map((t, i, arr) =>
+                                <span key={t}><span className="string">"{t}"</span>{i < arr.length - 1 && <span className="command">, </span>}</span>
+                            )}
+                            <span className="command">];</span>
+                        </p>
+
+                        <div className="hero-links">
+                            <Link className="hero-link hero-link-primary" to="/projects">
+                                <i className="fa fa-code"/> projects
+                            </Link>
+                            <Link className="hero-link" to="/cv">
+                                <i className="fa fa-file-text"/> resume
+                            </Link>
+                            <a className="hero-link" href="https://github.com/vish-chan" target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-github"/> github
+                            </a>
+                            <a className="hero-link" href="https://www.linkedin.com/in/vishal-chand" target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-linkedin"/> linkedin
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
-
-function SmallCard(props) {
-    return(
-       <Link className={"circle "+props.className} to={props.to}>{props.text}</Link>
     )
 }
