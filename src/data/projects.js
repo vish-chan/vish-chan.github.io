@@ -6,7 +6,7 @@ export const PROJECTS = [
         tech: ["Java", "Spring Boot", "ByteBuddy", "React", "TypeScript"],
         desc: "Write Java algorithms and see them execute step by step. Uses a Java agent to transform bytecode at class load time, automatically visualizing arrays, collections, trees, graphs, and method calls with zero manual instrumentation.",
         github: "https://github.com/vish-chan/AlgoFlow",
-        link: "https://algopad.up.railway.app/",
+        link: "https://www.algopad.dev/",
     },
     {
         id: 6,

@@ -12,7 +12,7 @@ function Banner() {
     <div className="top-banner">
       <div className="container banner-inner">
         <span>🚀 <strong>AlgoFlow</strong> — Visualize Java algorithms step by step, zero instrumentation.{' '}
-          <a href="https://algopad.up.railway.app/" target="_blank" rel="noopener noreferrer">Try it live →</a>
+          <a href="https://www.algopad.dev/" target="_blank" rel="noopener noreferrer">Try it live →</a>
         </span>
         <button className="banner-close" onClick={() => setVisible(false)}>✕</button>
       </div>

@@ -9,7 +9,7 @@ const ASCII_BANNER = [
   '   \\ V / | \\__ \\ | | | (_| | | | |___| | | | (_| | | | | (_| |',
   '    \\_/  |_|___/_| |_|\\__,_|_|  \\____|_| |_|\\__,_|_| |_|\\__,_|',
   '',
-  '  role   ~ SDE II @ Amazon \u2014 Languages & Runtime',
+  '  role   ~ Senior SDE @ Amazon \u2014 Languages & Runtime',
   '  focus  ~ JVM internals \u00b7 performance engineering',
   '  edu    ~ IIT Roorkee CS \u2014 B.Tech + M.Tech, 2015',
   '  bg     ~ OpenJDK contributor \u00b7 systems \u00b7 distributed computing',

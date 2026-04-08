@@ -2,7 +2,7 @@ export const EXPERIENCE = [
     {
         id: 8,
         company: "Amazon",
-        designation: "Software Development Engineer II | Languages & Runtime",
+        designation: "Senior Software Engineer | Languages & Runtime",
         duration: "2022 - present",
         location: "Dublin, Ireland",
         desc: "Optimized JVM internals including Custom ModuleLoader (96.8% latency reduction) and Reflection API bottlenecks (40% improvement). Validated Pyroscope V2 horizontal scalability on a 74-node cluster. Built end-to-end benchmarking automation on AWS EC2, reducing manual toil by 80%. Prototyped zero-overhead code coverage tool leveraging JVM profiling data.",
